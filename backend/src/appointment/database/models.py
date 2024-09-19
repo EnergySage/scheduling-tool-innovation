@@ -124,11 +124,11 @@ class Subscriber(HasSoftDelete, Base):
     id = Column(Integer, primary_key=True, index=True)
     username = Column(encrypted_type(String), unique=True, index=True)
     # Encrypted (here) and hashed (by the associated hashing functions in routes/auth)
-    password = Column(encrypted_type(String), index=False)
+    # password = Column(encrypted_type(String), index=False)
 
     # Use subscriber.preferred_email for any email, or other user-facing presence.
     email = Column(encrypted_type(String), unique=True, index=True)
-    secondary_email = Column(encrypted_type(String), nullable=True, index=True)
+    # secondary_email = Column(encrypted_type(String), nullable=True, index=True)
 
     name = Column(encrypted_type(String), index=True)
     level = Column(Enum(SubscriberLevel), default=SubscriberLevel.basic, index=True)

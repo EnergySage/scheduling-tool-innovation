@@ -1,6 +1,9 @@
+import base64
 import datetime
+import json
 import os
 from typing import Annotated
+from uuid import UUID
 
 import sentry_sdk
 from fastapi import Depends, Body, Request, HTTPException
@@ -156,3 +159,29 @@ def get_subscriber_from_schedule_or_signed_url(
         raise validation.InvalidLinkException
 
     return subscriber
+
+def get_flash_user_data_from_token(request):
+    token = request.headers.get('Authorization', None)
+    if not token:
+        return "Missing Authorization Header"
+    
+    token = token.replace("Bearer ", "")
+
+    _, payload, _ = token.split(".")
+
+    # b64decode() requires the length of input to be a multiple of 4
+    padded_payload = payload + "=" * (4 - len(payload) % 4)
+    decoded_payload = base64.b64decode(padded_payload).decode("utf-8")
+
+    payload_json = json.loads(decoded_payload)
+    print("________________________________")
+    print(payload_json)
+    print("________________________________")
+    flash_user_data = {
+        "username": payload_json["preferred_username"],
+        "email": payload_json["email"],
+        "name": payload_json["given_name"] + " " + payload_json["family_name"]
+    }
+
+    return flash_user_data
+

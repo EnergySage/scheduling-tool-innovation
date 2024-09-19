@@ -5,7 +5,7 @@ import uuid
 from datetime import timedelta, datetime, UTC
 from secrets import token_urlsafe
 from typing import Annotated
-
+from fastapi import Request
 import argon2.exceptions
 import jwt
 from fastapi.security import OAuth2PasswordRequestForm
@@ -22,7 +22,7 @@ from ..database.models import Subscriber, ExternalConnectionType
 from ..defines import INVITES_TO_GIVE_OUT
 
 from ..dependencies.database import get_db
-from ..dependencies.auth import get_subscriber, get_admin_subscriber, get_subscriber_from_onetime_token
+from ..dependencies.auth import get_flash_user_data_from_token, get_subscriber, get_admin_subscriber, get_subscriber_from_onetime_token
 
 from ..controller import auth
 from ..controller.apis.fxa_client import FxaClient
@@ -348,26 +348,81 @@ def permission_check(subscriber: Subscriber = Depends(get_admin_subscriber)):
     return True  # Covered by get_admin_subscriber
 
 
-# @router.get('/test-create-account')
-# def test_create_account(email: str, password: str, timezone: str, db: Session = Depends(get_db)):
-#     """Used to create a test account"""
-#     if os.getenv('APP_ENV') != 'dev':
-#         raise HTTPException(status_code=405)
-#     if os.getenv('AUTH_SCHEME') != 'password':
-#         raise HTTPException(status_code=405)
-#
-#     subscriber = repo.subscriber.create(db, schemas.SubscriberBase(
-#         email=email,
-#         username=email,
-#         name=email.split('@')[0],
-#         timezone=timezone
-#     ))
-#
-#     # Update with password
-#     subscriber.password = get_password_hash(password)
-#
-#     db.add(subscriber)
-#     db.commit()
-#     db.refresh(subscriber)
-#
-#     return subscriber
+@router.get('/create-account-no-waiting-list')
+def create_account_no_waiting_list(email: str, password: str, timezone: str, db: Session = Depends(get_db)):
+    """Used to create a test account"""
+    if os.getenv('APP_ENV') != 'dev':
+        raise HTTPException(status_code=405)
+    if os.getenv('AUTH_SCHEME') != 'password':
+        raise HTTPException(status_code=405)
+
+    subscriber = repo.subscriber.create(db, schemas.SubscriberBase(
+        email=email,
+        username=email,
+        name=email.split('@')[0],
+        timezone=timezone
+    ))
+
+    # Update with password
+    subscriber.password = utils.get_password_hash(password)
+
+    db.add(subscriber)
+    db.commit()
+    db.refresh(subscriber)
+
+    return subscriber
+
+@router.get('/create-account-no-waiting-list')
+def create_account_no_waiting_list(email: str, password: str, timezone: str, db: Session = Depends(get_db)):
+    """Used to create a test account"""
+    if os.getenv('APP_ENV') != 'dev':
+        raise HTTPException(status_code=405)
+    if os.getenv('AUTH_SCHEME') != 'password':
+        raise HTTPException(status_code=405)
+
+    subscriber = repo.subscriber.create(db, schemas.SubscriberBase(
+        email=email,
+        username=email,
+        name=email.split('@')[0],
+        timezone=timezone
+    ))
+
+    # Update with password
+    subscriber.password = utils.get_password_hash(password)
+
+    db.add(subscriber)
+    db.commit()
+    db.refresh(subscriber)
+
+    return subscriber
+
+@router.get('/login-or-create-user')
+def login_or_create_user(request: Request, db: Session = Depends(get_db)):
+    """Used to create a test account"""
+    if os.getenv('APP_ENV') != 'dev':
+        raise HTTPException(status_code=405)
+    if os.getenv('AUTH_SCHEME') != 'password':
+        raise HTTPException(status_code=405)
+
+    user_data = get_flash_user_data_from_token(request)
+
+    if repo.subscriber.get_by_email(db, user_data["email"]):
+        return "Successfully logged in"
+
+    else:
+
+        subscriber = repo.subscriber.create(db, schemas.SubscriberBase(
+            email=user_data["email"],
+            username=user_data["username"],
+            name=user_data["name"],
+            timezone="UTC"
+        ))
+
+    # Update with password
+    # subscriber.password = utils.get_password_hash(password)
+
+    db.add(subscriber)
+    db.commit()
+    db.refresh(subscriber)
+
+    return subscriber
