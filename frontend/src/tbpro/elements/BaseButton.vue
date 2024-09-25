@@ -70,15 +70,18 @@ button:hover > .tooltip,
 
 .secondary {
   background-color: var(--colour-neutral-subtle);
-  color: var(--colour-ti-base);
+  color: var(--colour-secondary-border);
+  border: 2px solid transparent;
+  border-color: var(--colour-secondary-border);
 
   &:hover:enabled {
     box-shadow: 0 0.25rem 0.125rem -0.1875rem #0000001A;
+    background-color: var(--colour-primary-soft);
   }
 
   &:active:enabled {
-    background-color: var(--colour-neutral-border);
-    border-color: var(--colour-neutral-border);
+    background-color: var(--colour-secondary-border);
+    border-color: var(--colour-secondary-border);
   }
 }
 
@@ -104,8 +107,8 @@ button {
   justify-content: center;
   align-items: center;
 
-  border-radius: var(--border-radius);
-  @mixin faded-border var(--colour-btn-border);
+  border-radius: .75rem;
+  /* @mixin faded-border var(--colour-btn-border); */
   box-shadow: 0 0.375rem 0.188rem -0.25rem #152F3C4D;
   font-family: 'Inter', 'sans-serif';
   font-size: var(--txt-input); /* 13px */

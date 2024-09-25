@@ -16,7 +16,7 @@ defineProps<Props>();
   <div
     class="
       m-auto flex size-[95%] shrink-0 items-center rounded border-l-4
-      border-teal-400 px-2 text-sm text-gray-700 hover:shadow-md dark:text-gray-200
+      border-blue-400 px-2 text-sm text-gray-700 hover:shadow-md dark:text-gray-200
     "
     :class="{ 'h-full': !isMonthView }"
     :style="{

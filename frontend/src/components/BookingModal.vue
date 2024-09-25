@@ -89,7 +89,7 @@ onMounted(() => {
       <div class="btn-close absolute right-8 top-8 cursor-pointer" @click="emit('close')" :title="t('label.close')">
         <icon-x class="size-6 fill-transparent stroke-gray-700 stroke-1 dark:stroke-gray-400"/>
       </div>
-      <div class="mb-4 text-center text-2xl font-semibold text-teal-500">
+      <div class="mb-4 text-center text-2xl font-semibold">
         <span v-if="isEditable">{{ t('heading.bookSelection') }}</span>
         <span v-else-if="isFinished && !requiresConfirmation">{{ t('heading.eventBooked') }}</span>
         <span v-else-if="isFinished && requiresConfirmation">{{ t('info.bookingSuccessfullyRequested') }}</span>
@@ -98,7 +98,7 @@ onMounted(() => {
         <div>{{ event.title }}:</div>
         <div>{{ time }}</div>
       </div>
-      <div v-if="!isFinished" class="mb-4 text-center text-sm text-teal-500 underline underline-offset-2">
+      <div v-if="!isFinished" class="mb-4 text-center text-sm text-blue-700 underline underline-offset-2">
         {{ t('label.timeZone') }}: {{ attendee?.timezone ?? dj.tz.guess() }}
       </div>
       <div v-if="!isFinished && route.name === 'availability' && requiresConfirmation" class="text-center text-sm font-semibold">

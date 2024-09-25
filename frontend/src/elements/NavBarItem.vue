@@ -17,9 +17,9 @@ defineProps<Props>();
       {{ label }}
     </router-link>
     <div
-      class="absolute bottom-0 h-1 w-full rounded bg-transparent transition-colors ease-in-out"
+      class="absolute bottom-0 h-1 w-full rounded transition-colors ease-in-out"
       :class="{
-        'bg-gradient-to-r from-teal-500 to-sky-500': active,
+        'bg-blue-700': active,
         'group-hover:bg-gray-200 group-hover:dark:bg-gray-400': !active,
       }"
     ></div>

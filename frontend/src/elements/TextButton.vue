@@ -58,7 +58,7 @@ const copyToClipboard = async () => {
     />
     <icon-clipboard-check
       v-if="copy && copied"
-      class="size-4 fill-transparent stroke-teal-500 stroke-2"
+      class="size-4 fill-transparent stroke-blue-700 stroke-2"
     />
     {{ label }}
     <transition>

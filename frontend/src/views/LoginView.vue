@@ -16,7 +16,7 @@ import {
 import { posthog, usePosthog } from '@/composables/posthog';
 import { MetricEvents } from '@/definitions';
 import GenericModal from '@/components/GenericModal.vue';
-import HomeView from '@/views/HomeView.vue';
+import InWidgetView from '@/views/InWidgetView.vue';
 import TextInput from '@/tbpro/elements/TextInput.vue';
 import PrimaryButton from '@/tbpro/elements/PrimaryButton.vue';
 import WordMark from '@/elements/WordMark.vue';
@@ -33,7 +33,6 @@ const router = useRouter();
 const isPasswordAuth = inject(isPasswordAuthKey);
 const isFxaAuth = inject(isFxaAuthKey);
 // Don't show the invite code field, only the "Join the waiting list" part
-const hideInviteField = ref(false);
 const isLoading = ref(false);
 const formRef = ref();
 
@@ -50,13 +49,6 @@ const password = ref('');
 const inviteCode = ref('');
 const loginStep = ref(LoginSteps.Login);
 const loginError = ref<string>(null);
-
-onMounted(() => {
-  if (route.name === 'join-the-waiting-list') {
-    hideInviteField.value = true;
-    loginStep.value = LoginSteps.SignUp;
-  }
-});
 
 const handleFormError = (errObj: PydanticException) => {
   const { detail } = errObj;
@@ -78,7 +70,7 @@ const handleFormError = (errObj: PydanticException) => {
 };
 
 /**
- * Sign up for the beta / waiting list
+ * Sign up
  */
 const signUp = async () => {
   if (!email.value) {
@@ -87,9 +79,13 @@ const signUp = async () => {
 
   isLoading.value = true;
   loginError.value = '';
-  const { data, error }: BooleanResponse = await call('waiting-list/join').post({
-    email: email.value,
-  }).json();
+  const data = ref('');
+  const error = ref('');
+
+  // TODO: Sign up action call.
+  // const { data, error }: BooleanResponse = await call('').post({
+  //   email: email.value,
+  // }).json();
 
   if (error?.value) {
     // Handle error
@@ -99,23 +95,17 @@ const signUp = async () => {
   }
 
   if (!data.value) {
-    loginError.value = t('waitingList.signUpAlreadyExists');
+    loginError.value = 'signUpAlreadyExists';
 
     if (usePosthog) {
-      posthog.capture(MetricEvents.SignUpAlreadyExists, {
-        waitingList: true,
-        for: 'beta',
-      });
+      posthog.capture(MetricEvents.SignUpAlreadyExists, {});
     }
   } else {
     // Advance them to the "Check your email" step
     loginStep.value = LoginSteps.SignUpConfirm;
 
     if (usePosthog) {
-      posthog.capture(MetricEvents.SignUp, {
-        waitingList: true,
-        for: 'beta',
-      });
+      posthog.capture(MetricEvents.SignUp, {});
     }
   }
 
@@ -199,7 +189,7 @@ const onEnter = () => {
     return;
   }
 
-  if ((loginStep.value === LoginSteps.SignUp || hideInviteField.value) && inviteCode.value === '') {
+  if (loginStep.value === LoginSteps.SignUp && inviteCode.value === '') {
     signUp();
   } else {
     login();
@@ -209,10 +199,9 @@ const onEnter = () => {
 
 <template>
   <div>
-    <home-view></home-view>
+    <in-widget-view></in-widget-view>
     <generic-modal :error-message="loginError">
       <template v-slot:header>
-        <word-mark/>
         <h2 id="title" v-if="loginStep === LoginSteps.Login">
           {{ t('login.login.title') }}
         </h2>
@@ -241,9 +230,9 @@ const onEnter = () => {
       </div>
       <div class="form-body">
         <form v-if="loginStep !== LoginSteps.SignUpConfirm" class="form" ref="formRef" autocomplete="off" @submit.prevent @keyup.enter="() => onEnter()">
-          <text-input name="email" v-model="email" :required="true" :help="loginStep === LoginSteps.Login || hideInviteField ? t('login.form.privacy') : null">{{ t('label.email') }}</text-input>
-          <text-input v-if="isPasswordAuth" name="password" v-model="password" :required="true">{{ t('label.password') }}</text-input>
-          <text-input v-if="loginStep === LoginSteps.SignUp && !hideInviteField" name="inviteCode" v-model="inviteCode" :help="t('login.form.no-invite-code')">{{ t('label.inviteCode') }}</text-input>
+          <text-input name="email" v-model="email" :required="true" :help="loginStep === LoginSteps.Login ? t('login.form.privacy') : null">{{ t('label.email') }}</text-input>
+          <text-input v-if="isPasswordAuth" type="password" name="password" v-model="password" :required="true">{{ t('label.password') }}</text-input>
+          <text-input v-if="loginStep === LoginSteps.SignUp" name="inviteCode" v-model="inviteCode" :help="t('login.form.no-invite-code')">{{ t('label.inviteCode') }}</text-input>
         </form>
       </div>
       <template v-slot:actions>

@@ -1,6 +1,6 @@
-# Thunderbird Appointment Frontend
+# Site Visit Scheduling Frontend
 
-This is the frontend component of Thunderbird Appointment. It's written in VueJS with Vite.
+This is the frontend component of Site Visit Scheduling. It's written in VueJS with Vite.
 
 ## Project setup
 

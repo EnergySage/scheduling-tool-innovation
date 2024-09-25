@@ -18,9 +18,9 @@ defineProps<Props>();
   <div
     class="m-auto size-[95%] shrink-0 text-sm text-gray-700 hover:shadow-md dark:text-gray-200"
     :class="{
-      'group/event cursor-pointer rounded-md p-1 hover:bg-gradient-to-b hover:shadow-lg': !isBusy,
-      'bg-teal-50 hover:from-teal-500 hover:to-sky-600 hover:!text-white dark:bg-teal-800': !isBusy,
-      'bg-gradient-to-b from-teal-500 to-sky-600 shadow-lg': isSelected,
+      'group/event cursor-pointer rounded-md p-1 hover:bg-blue-300 hover:shadow-lg': !isBusy,
+      'bg-blue-50 hover:bg-blue-500 hover:!text-white dark:bg-blue-600 dark:hover:bg-blue-800': !isBusy,
+      'bg-blue-500 text-white dark:bg-blue-800 shadow-lg': isSelected,
       'h-full rounded': !isMonthView,
       '!cursor-not-allowed rounded-md bg-gray-100 p-1 dark:bg-gray-600': isBusy,
     }"
@@ -28,7 +28,7 @@ defineProps<Props>();
     <div class="grid">
       <div
         class="
-          h-full truncate rounded border-2 border-dashed border-teal-500 p-1
+          h-full truncate rounded border-2 border-dashed border-blue-400 p-1
           font-semibold group-hover/event:border-white"
         :class="{
           '!border-none': isBusy,

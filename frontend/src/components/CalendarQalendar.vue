@@ -246,7 +246,7 @@ const calendarEvents = computed(() => {
         : `${start.format(displayFormat)} - ${end.format(displayFormat)}`,
       colorScheme: processCalendarColorScheme(
         appointment?.calendar_title ?? 'booking',
-        appointment?.calendar_color ?? 'rgb(20, 184, 166)',
+        appointment?.calendar_color ?? '#4a62d4',
       ),
       time: {
         start: start.format(DateFormatStrings.Qalendar),
@@ -259,7 +259,7 @@ const calendarEvents = computed(() => {
         slot_status: slot.booking_status,
         booking_status: appointment.status,
         calendar_title: appointment.calendar_title,
-        calendar_color: appointment?.calendar_color ?? 'rgb(20, 184, 166)',
+        calendar_color: appointment?.calendar_color ?? '#4a62d4',
         duration: slot.duration,
         preview: appointment?.type === 'schedule',
         all_day: false,
@@ -457,8 +457,8 @@ watch(route, () => {
   --qalendar-border-gray-thin: theme('borderWidth.DEFAULT') solid var(--qalendar-appointment-border-color) !important;
   --qalendar-border-radius: var(--qalendar-appointment-border-radius) !important;
   /* Colour overrides */
-  --qalendar-blue: theme('colors.teal.500') !important;
-  --qalendar-blue-transparent: theme('colors.teal.500') / 90% !important;
+  --qalendar-blue: theme('colors.blue.500') !important;
+  --qalendar-blue-transparent: theme('colors.blue.500') / 90% !important;
   --qalendar-gray-quite-dark: var(--qalendar-appointment-text) !important;
   --qalendar-gray: var(--qalendar-appointment-fg) !important;
   --qalendar-green: var(--qalendar-blue) !important;
@@ -556,21 +556,21 @@ watch(route, () => {
 This was a fancy layer class, but @apply in sfc with custom layer classes is a nightmare. */
 .calendar-root-wrapper .date-picker__value-display,
 .calendar-root-wrapper .calendar-header__mode-picker {
-  @apply relative h-10 text-base font-semibold whitespace-nowrap rounded-full bg-gradient-to-br
+  @apply relative h-10 text-base font-semibold whitespace-nowrap rounded-lg
   md:px-2 transition-all ease-in-out flex items-center justify-center gap-2
-  text-white from-teal-400 to-sky-600 md:min-w-32;
+  text-white bg-blue-600 md:min-w-32;
 }
 
 /* @apply doesn't seem to mesh well with states */
 .calendar-root-wrapper .date-picker__value-display:hover,
 .calendar-root-wrapper .calendar-header__mode-picker:hover {
-  @apply from-sky-400 to-teal-600 shadow-md
+  @apply bg-blue-700 shadow-md
 }
 
 /* ditto */
 .calendar-root-wrapper .date-picker__value-display:disabled,
 .calendar-root-wrapper .calendar-header__mode-picker:disabled {
-  @apply opacity-50 shadow-none
+  @apply bg-gray-200 text-gray-500 shadow-none
 }
 
 /*

@@ -187,7 +187,6 @@ onMounted(async () => {
 
 <template>
   <div>
-    <h1>Original Page</h1>
     <!-- booking page content: loading -->
     <main
       v-if="activeView === BookingCalendarView.Loading"
@@ -206,7 +205,7 @@ onMounted(async () => {
       />
     </main>
     <!-- booking page content: successful booking -->
-    <main
+    <!-- <main
       v-else-if="activeView === BookingCalendarView.Success"
       class="flex h-screen select-none flex-col-reverse items-center justify-evenly px-4 md:flex-row "
     >
@@ -215,7 +214,7 @@ onMounted(async () => {
         :selected-event="selectedEvent"
         :requested="appointment?.booking_confirmation"
       />
-    </main>
+    </main> -->
     <!-- booking page content: time slot selection -->
     <main
       v-else

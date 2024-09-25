@@ -2,7 +2,7 @@
   "app": {
     "summary": "Invite others to grab times on your calendar. Choose a date. Make appointments as easy as it gets.",
     "tagline": "Plan less, do more",
-    "title": "Thunderbird Appointment"
+    "title": "Site Visit Scheduling"
   },
   "error": {
     "actionNeeded": "Action needed",
@@ -216,7 +216,7 @@
     "end": "End",
     "endDate": "End Date",
     "endTime": "End Time",
-    "enterEmailToInvite": "Enter an email to invite them to Thunderbird Appointment:",
+    "enterEmailToInvite": "Enter an email to invite them to Site Visit Scheduling:",
     "error": "Error",
     "faq": "FAQ",
     "farthestBooking": "Farthest Booking",
@@ -368,15 +368,15 @@
   },
   "settings": {
     "invite": {
-      "brief": "Below are invite codes for Thunderbird Appointment. Feel free to give them out, and tell the individual to present it during the login screen."
+      "brief": "Below are invite codes for Site Visit Scheduling. Feel free to give them out, and tell the individual to present it during the login screen."
     }
   },
   "text": {
-    "accountDataNotice": "Download all of your data from Thunderbird Appointment.",
-    "accountDeletionWarning": "Your account and data on Thunderbird Appointment will be deleted. This does not impact your linked calendars. And you can create a new account with us anytime.",
+    "accountDataNotice": "Download all of your data from Site Visit Scheduling.",
+    "accountDeletionWarning": "Your account and data on Site Visit Scheduling will be deleted. This does not impact your linked calendars. And you can create a new account with us anytime.",
     "bookingsWillAutomaticallyBeConfirmed": "Bookings will automatically be confirmed and added to your calendar.",
     "bookingsWillRequireToBeConfirmed": "You will need to confirm or decline bookings on your calendar.",
-    "calendarDeletionWarning": "Removing this calendar will remove all appointments and schedules from Thunderbird Appointment. Any confirmed events currently stored in your calendar will not be removed.",
+    "calendarDeletionWarning": "Removing this calendar will remove all appointments and schedules from Site Visit Scheduling. Any confirmed events currently stored in your calendar will not be removed.",
     "chooseDateAndTime": "Choose when to meet.",
     "connectZoom": "Connect your Zoom account to generate instant meeting invites for each booking.",
     "contactRequestForm": "Please use the contact form below to send any feedback, questions, or concerns to our support team. If needed we will try and contact you for further information as soon as possible.",
@@ -384,21 +384,21 @@
     "denialSentToAddress": "We've let the booker ({address}) know you can't make this event.",
     "disclaimerGABooking": "Your booking will be confirmed by the calendar owner.",
     "googlePermissionCalendarName": "See and download your calendars using Google Calendar",
-    "googlePermissionCalendarReason": "Thunderbird Appointment requires this permission to display a list of calendars you can connect with.",
-    "googlePermissionDisclaimer": "Thunderbird Appointment requires the following permissions from Google Calendar for optimal functionality.",
-    "googlePermissionEventReason": "Thunderbird Appointment requires this permission to add bookings to your connected Google Calendars.",
+    "googlePermissionCalendarReason": "Site Visit Scheduling requires this permission to display a list of calendars you can connect with.",
+    "googlePermissionDisclaimer": "Site Visit Scheduling requires the following permissions from Google Calendar for optimal functionality.",
+    "googlePermissionEventReason": "Site Visit Scheduling requires this permission to add bookings to your connected Google Calendars.",
     "googlePermissionEventsName": "View and edit events on all your calendars",
     "homepage": {
       "calendarCopy": "Connect your calendar and see all your meetings in one place. Book one-off or recurring events and invite people to join you.",
       "copywrite": "Thunderbird is now part of {mzlaLink}, a wholly owned subsidiary of Mozilla Foundation. Portions of this content are ©1998–2024 by individual contributors. Content available under a {creativeCommonsLink}.",
       "creativeCommonsLinkText": "Creative Commons license",
-      "intro": "Thunderbird Appointment makes it easy to find a time to meet. So you can ditch the admin and streamline your day.",
+      "intro": "Site Visit Scheduling makes it easy to find a time to meet. So you can ditch the admin and streamline your day.",
       "mzlaLinkText": "MZLA Technologies Corporation",
       "planEventBody": "With multiple ways of organising and setting up meetings.",
       "planEventTitle": "Plan an Event",
       "scheduleCopy": "Need to organise a meeting with a client? We’ve got you covered. Send them your general availability and stop the calendar juggling.",
-      "screenshotCalendarAlt": "A screenshot of Thunderbird Appointment's calendar page.",
-      "screenshotScheduleAlt": "A screenshot of Thunderbird Appointment's schedule page.",
+      "screenshotCalendarAlt": "A screenshot of Site Visit Scheduling's calendar page.",
+      "screenshotScheduleAlt": "A screenshot of Site Visit Scheduling's schedule page.",
       "sectionHeader": "Easier scheduling for everyone",
       "setAvailabilityBody": "Choose when and how people can book time with you.",
       "setAvailabilityTitle": "Set your availability",
@@ -426,11 +426,11 @@
     "settings": {
       "connectedAccounts": {
         "connect": {
-          "fxa": "This is the account associated with your login. If you delete your Mozilla Account your data with Thunderbird Appointment will also be removed.",
+          "fxa": "This is the account associated with your login. If you delete your Mozilla Account your data with Site Visit Scheduling will also be removed.",
           "google": "You can connect your Google account to access your calendars. Disconnecting your account will remove your calendars, and associated data.",
           "googleLegal": {
             "link": "Google API Services User Data Policy",
-            "text": "Thunderbird Appointment use and transfer of information received from Google APIs to any other app will adhere to {0}, including the Limited Use requirements."
+            "text": "Site Visit Scheduling use and transfer of information received from Google APIs to any other app will adhere to {0}, including the Limited Use requirements."
           },
           "zoom": "You can connect your Zoom account to enable instant meeting invites with your appointments."
         },
@@ -438,7 +438,7 @@
           "google": {
             "cancel": "Back",
             "confirm": "Disconnect",
-            "message": "Disconnecting your Google Calendars will remove all available Google Calendars and associated data from your Thunderbird Appointment account. If your schedule is setup with a Google Calendar then it will be turned off until you set it to a new calendar.",
+            "message": "Disconnecting your Google Calendars will remove all available Google Calendars and associated data from your Site Visit Scheduling account. If your schedule is setup with a Google Calendar then it will be turned off until you set it to a new calendar.",
             "title": "Disconnect Google Calendar"
           },
           "zoom": {
@@ -474,7 +474,7 @@
     "leaveInfo": "Your email has been successfully removed from our waitlist.\nIf you change your mind, you can always rejoin.",
     "marketing": [
       "Own your calendar, share your time.",
-      "Thunderbird Appointment simplifies the way you find time to connect so you can soar past the planning, and get to the living."
+      "Site Visit Scheduling simplifies the way you find time to connect so you can soar past the planning, and get to the living."
     ],
     "signUpAlreadyExists": "You are already on the waiting list.",
     "signUpCheckYourEmail": "Check your email for more information.",

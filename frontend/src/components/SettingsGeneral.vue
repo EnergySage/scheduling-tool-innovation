@@ -124,19 +124,19 @@ const updateTimezone = async () => {
       <div class="text-lg">{{ t('label.timeFormat') }}</div>
       <div class="text-lg"><!--{{ t('label.dateFormat') }}--></div>
       <label class="flex cursor-pointer items-center gap-4 pl-4">
-        <input type="radio" name="timeFormat" :value="12" v-model="timeFormat" class="text-teal-500" />
+        <input type="radio" name="timeFormat" :value="12" v-model="timeFormat" class="text-blue-700" />
         <div class="w-full max-w-2xs">{{ t('label.12hAmPm') }}</div>
       </label>
       <label class="flex cursor-pointer items-center gap-4 pl-4">
-        <!-- <input type="radio" name="dateFormat" class="text-teal-500" />
+        <!-- <input type="radio" name="dateFormat" class="text-blue-700" />
         <div class="w-full max-w-2xs">{{ t('label.DDMMYYYY') }}</div> -->
       </label>
       <label class="flex cursor-pointer items-center gap-4 pl-4">
-        <input type="radio" name="timeFormat" :value="24" v-model="timeFormat" class="text-teal-500" />
+        <input type="radio" name="timeFormat" :value="24" v-model="timeFormat" class="text-blue-700" />
         <div class="w-full max-w-2xs">{{ t('label.24h') }}</div>
       </label>
       <label class="flex cursor-pointer items-center gap-4 pl-4">
-        <!-- <input type="radio" name="dateFormat" class="text-teal-500" />
+        <!-- <input type="radio" name="dateFormat" class="text-blue-700" />
         <div class="w-full max-w-2xs">{{ t('label.MMDDYYYY') }}</div> -->
       </label>
     </div>

@@ -7,7 +7,7 @@ html {
    * Generic Colours
    * Prefer the named colours over these!
    */
-  --colour-shark-900: #26272A;
+  --colour-shark-900: #222633;
   --colour-bunker-950: #18181B;
 
   /*
@@ -18,78 +18,79 @@ html {
   --colour-neutral-lower: #F7F7F7;
   --colour-neutral-raised: var(--colour-neutral-base);
   --colour-neutral-subtle: var(--colour-neutral-lower);
-  --colour-neutral-border: #E4E4E7;
-  --colour-neutral-border-intense: #91939F;
+  --colour-neutral-border: #DFE1EB;
+  --colour-neutral-border-intense: #878999;
 
   /*
    * Primary
    * Applied frequently to surfaces highlight actions & information.
    */
-  --colour-primary-soft: #F0F8FF;
-  --colour-primary-default: #1373D9;
-  --colour-primary-hover: #175FB6;
-  --colour-primary-pressed: #19518F;
+  --colour-primary-soft: #DDEDFF;
+  --colour-primary-default: #2E46B9;
+  --colour-primary-hover: #1D3297;
+  --colour-primary-pressed: #162676;
 
   /*
    * Secondary
    * Applied sparingly to highlight information.
    */
-  --colour-secondary-soft: #FAF5FF;
-  --colour-secondary-default: #6B21A8;
-  --colour-secondary-hover: #571C87;
-  --colour-secondary-pressed: #3A0764;
+  --colour-secondary-soft: #FFF3DF;
+  --colour-secondary-default: #FF9D51;
+  --colour-secondary-hover: #FF9133;
+  --colour-secondary-pressed: #ED7C2B;
+  --colour-secondary-border: #2E46B9;
 
   /*
    * Success
    * Applied sparingly to show positive feedback/status.
    */
-  --colour-success-soft: #F4F9F4;
-  --colour-success-default: #1D783B;
-  --colour-success-hover: #1C5F32;
-  --colour-success-pressed: #194E2C;
+  --colour-success-soft: #CCEDD8;
+  --colour-success-default: #80CE97;
+  --colour-success-hover: #00A759;
+  --colour-success-pressed: #00A759;
 
   /*
    * Warning
    * Applied sparingly to show warning feedback/status.
    * Notifications/messaging
    */
-  --colour-warning-soft: #FEFAE8;
-  --colour-warning-default: #FACC15;
-  --colour-warning-hover: #EABD08;
-  --colour-warning-pressed: #CAA204;
+  --colour-warning-soft: #F8EFCA;
+  --colour-warning-default: #F4DF83;
+  --colour-warning-hover: #F4CA11;
+  --colour-warning-pressed: #F4CA11;
 
   /*
    * Danger
    * Applied sparingly to show negative feedback/status or dangerous actions.
    * Errors
    */
-  --colour-danger-soft: #FEF2F2;
-  --colour-danger-default: #991B1B;
-  --colour-danger-hover: #7F1D1D;
-  --colour-danger-pressed: #7F1D1D;
+  --colour-danger-soft: #F7D7DB;
+  --colour-danger-default: #EFA6AF;
+  --colour-danger-hover: #DE3C50;
+  --colour-danger-pressed: #DE3C50;
 
   /*
    * Text+Icon
    * Applied frequently for text and icons.
    */
-  --colour-ti-base: #1A202C;
-  --colour-ti-secondary: #4C4D58;
-  --colour-ti-muted: #737584;
-  --colour-ti-highlight: #1373D9;
-  --colour-ti-warning: #713F12;
-  --colour-ti-critical: #DC2626;
-  --colour-ti-success: #1D783B;
+  --colour-ti-base: #222633;
+  --colour-ti-secondary: #515362;
+  --colour-ti-muted: #878999;
+  --colour-ti-highlight: #2c49dd;
+  --colour-ti-warning: #F4CA11;
+  --colour-ti-critical: #DE3C50;
+  --colour-ti-success: #00A759;
 
   /*
    * Accent Colours
    * Used for accents, gradients, highlights.
    * *Do not use with text
    */
-  --colour-accent-teal: #25A6A0;
-  --colour-accent-blue: #58C9FF;
+  --colour-accent-teal: #00A759;
+  --colour-accent-blue: #85B2FF;
   --colour-accent-purple: #AE55F7;
-  --colour-accent-orange: #EA7308;
-  --colour-accent-pink: #E247C4;
+  --colour-accent-orange: #FFC28B;
+  --colour-accent-pink: #F7D7DB;
   --colour-accent-gray: #6E6F9B;
 
   /*
@@ -97,46 +98,46 @@ html {
    * Appointment
    */
   --colour-apmt-soft: #F3F9FC;
-  --colour-apmt-primary: #008080;
-  --colour-apmt-primary-hover: #066769;
-  --colour-apmt-primary-pressed: #0A5757;
-  --colour-apmt-secondary: #81D4B5;
-  --colour-apmt-accent-1: #A3ECE3;
-  --colour-apmt-accent-2: #03AFD7;
+  --colour-apmt-primary: #1D3297;
+  --colour-apmt-primary-hover: #162676;
+  --colour-apmt-primary-pressed: #162676;
+  --colour-apmt-secondary: #FFFFFF;
+  --colour-apmt-accent-1: #DDEDFF;
+  --colour-apmt-accent-2: #85B2FF;
 
   /*
    * Brand Colours
    * Send
    */
   --colour-send-soft: #FEF7EC;
-  --colour-send-primary: #F09D38;
-  --colour-send-primary-hover: #F09D38;
-  --colour-send-primary-pressed: #F09D38;
-  --colour-send-primary-secondary: #AA6000;
-  --colour-send-primary-accent-1: #1F8DDB;
-  --colour-send-primary-accent-2: #1F8DDB;
+  --colour-send-primary: #FF9133;
+  --colour-send-primary-hover: #FF9133;
+  --colour-send-primary-pressed: #FF9133;
+  --colour-send-primary-secondary: #ED7C2B;
+  --colour-send-primary-accent-1: #2E46B9;
+  --colour-send-primary-accent-2: #2E46B9;
 
   &.dark {
     /*
      * Neutral
      * Applied frequently for backgrounds, surfaces, dividers, and outlines.
      */
-    --colour-neutral-base: #1A202C;
+    --colour-neutral-base: #222633;
     --colour-neutral-lower: #18181B;
-    --colour-neutral-raised: #262D3B;
+    --colour-neutral-raised: #222633;
     --colour-neutral-subtle: var(--colour-neutral-raised);
-    --colour-neutral-border: #303A4A;
-    --colour-neutral-border-intense: #3D4D67;
+    --colour-neutral-border: #323543;
+    --colour-neutral-border-intense: #515362;
 
     /*
      * Primary
      * Applied frequently to surfaces highlight actions & information.
      */
-    --colour-primary-soft: #262C40;
-    --colour-primary-default: #58C9FF;
-    --colour-primary-hover: #32AEFF;
-    --colour-primary-pressed: #1B90F5;
-    /*--primary-text: #1A202C; // No matching light-mode variable! */
+    --colour-primary-soft: #1B1763;
+    --colour-primary-default: #85B2FF;
+    --colour-primary-hover: #688AEA;
+    --colour-primary-pressed: #4A62D4;
+    /*--primary-text: #222633; // No matching light-mode variable! */
 
     /*
      * Secondary
@@ -151,88 +152,88 @@ html {
      * Success
      * Applied sparingly to show positive feedback/status.
      */
-    --colour-success-soft: #082B16;
-    --colour-success-default: #DEFAE7;
-    --colour-success-hover: #C0F2CF;
-    --colour-success-pressed: #8EE7AA;
+    --colour-success-soft: #00A759;
+    --colour-success-default: #CCEDD8;
+    --colour-success-hover: #80CE97;
+    --colour-success-pressed: #80CE97;
 
     /*
      * Warning
      * Applied sparingly to show warning feedback/status.
      * Notifications/messaging
      */
-    --colour-warning-soft: #423606;
-    --colour-warning-default: #FEF2C3;
-    --colour-warning-hover: #FEE78A;
-    --colour-warning-pressed: #FDD847;
+    --colour-warning-soft: #F4CA11;
+    --colour-warning-default: #F8EFCA;
+    --colour-warning-hover: #F4DF83;
+    --colour-warning-pressed: #F4DF83;
 
     /*
      * Danger
      * Applied sparingly to show negative feedback/status or dangerous actions.
      * Errors
      */
-    --colour-danger-soft: #7F1D1D;
-    --colour-danger-default: #FEE2E2;
-    --colour-danger-hover: #FECACA;
-    --colour-danger-pressed: #FCA5A5;
+    --colour-danger-soft: #DE3C50;
+    --colour-danger-default: #F7D7DB;
+    --colour-danger-hover: #EFA6AF;
+    --colour-danger-pressed: #EFA6AF;
 
     /*
      * Text+Icon
      * Applied frequently for text and icons.
      */
-    --colour-ti-base: #EEEEF0;
-    --colour-ti-secondary: #D9D9DE;
-    --colour-ti-muted: #7F94AC;
-    --colour-ti-highlight: #58C9FF;
-    --colour-ti-warning: #FEE78A;
-    --colour-ti-critical: #EF4444;
-    --colour-ti-success: #55D37E;
+    --colour-ti-base: #F1F3FB;
+    --colour-ti-secondary: #DFE1EB;
+    --colour-ti-muted: #A7C9FF;
+    --colour-ti-highlight: #85B2FF;
+    --colour-ti-warning: #F4DF83;
+    --colour-ti-critical: #DE3C50;
+    --colour-ti-success: #80CE97;
 
     /*
     * Form elements
     * Applied frequently for inputs, switches and interactive elements.
     */
-    --colour-form-base: #737584;
-    --colour-form-active: #A3ECE3;
+    --colour-form-base: #878999;
+    --colour-form-active: #CCEDD8;
     --colour-form-inactive: #FEFFFF;
-    --colour-form-highlight: #1A202C;
-    --colour-form-border-intense: #777580;
+    --colour-form-highlight: #222633;
+    --colour-form-border-intense: #515362;
 
     /*
      * Accent Colours
      * Used for accents, gradients, highlights.
      * *Do not use with text
      */
-    --colour-accent-teal: #A3ECE3;
-    --colour-accent-blue: #58C9FF;
+    --colour-accent-teal: #CCEDD8;
+    --colour-accent-blue: #85B2FF;
     --colour-accent-purple: #8022CE;
-    --colour-accent-orange: #FEC18A;
-    --colour-accent-pink: #FBD3F6;
-    --colour-accent-gray: #C3CADE;
+    --colour-accent-orange: #FFC28B;
+    --colour-accent-pink: #F7D7DB;
+    --colour-accent-gray: #CFD1DF;
 
     /*
      * Brand Colours
      * Appointment
      */
-    --colour-apmt-soft: #152F3C;
-    --colour-apmt-primary: #A3ECE3;
-    --colour-apmt-primary-hover: #6DDBD1;
-    --colour-apmt-primary-pressed: #3EC3BA;
-    --colour-apmt-secondary: #25A6A0;
-    --colour-apmt-accent-1: #A3ECE3;
-    --colour-apmt-accent-2: #58C9FF;
+    --colour-apmt-soft: #222633;
+    --colour-apmt-primary: #CCEDD8;
+    --colour-apmt-primary-hover: #80CE97;
+    --colour-apmt-primary-pressed: #80CE97;
+    --colour-apmt-secondary: #00A759;
+    --colour-apmt-accent-1: #CCEDD8;
+    --colour-apmt-accent-2: #85B2FF;
 
     /*
      * Brand Colours
      * Send
      */
     --colour-send-soft: #411107;
-    --colour-send-primary: #F09D38;
-    --colour-send-primary-hover: #F09D38;
-    --colour-send-primary-pressed: #F09D38;
-    --colour-send-primary-secondary: #AA6000;
-    --colour-send-primary-accent-1: #1F8DDB;
-    --colour-send-primary-accent-2: #1F8DDB;
+    --colour-send-primary: #FF9133;
+    --colour-send-primary-hover: #FF9133;
+    --colour-send-primary-pressed: #FF9133;
+    --colour-send-primary-secondary: #ED7C2B;
+    --colour-send-primary-accent-1: #2E46B9;
+    --colour-send-primary-accent-2: #2E46B9;
   }
 
   &[data-tbpro-service='apmt'] {

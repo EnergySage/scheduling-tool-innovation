@@ -3,11 +3,12 @@ import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router';
 import BookingView from '@/views/BookingView.vue';
 import BookingConfirmationView from '@/views/BookingConfirmationView.vue';
 import ScheduleView from '@/views/ScheduleView.vue';
-import HomeView from '@/views/HomeView.vue';
 import LoginView from '@/views/LoginView.vue';
 import PostLoginView from '@/views/PostLoginView.vue';
 import { useUserStore } from '@/stores/user-store';
 import LogoutView from '@/views/LogoutView.vue';
+import InWidgetView from '@/views/InWidgetView.vue';
+import BookingWidgetView from '@/views/BookingWidgetView.vue';
 
 // lazy loaded components
 const ContactView = defineAsyncComponent(() => import('@/views/ContactView.vue'));
@@ -15,7 +16,6 @@ const AppointmentsView = defineAsyncComponent(() => import('@/views/Appointments
 const SettingsView = defineAsyncComponent(() => import('@/views/SettingsView.vue'));
 const ProfileView = defineAsyncComponent(() => import('@/views/ProfileView.vue'));
 const LegalView = defineAsyncComponent(() => import('@/views/LegalView.vue'));
-const WaitingListActionView = defineAsyncComponent(() => import('@/views/WaitingListActionView.vue'));
 const SubscriberPanelView = defineAsyncComponent(() => import('@/views/admin/SubscriberPanelView.vue'));
 const InviteCodePanelView = defineAsyncComponent(() => import('@/views/admin/InviteCodePanelView.vue'));
 const WaitingListPanelView = defineAsyncComponent(() => import('@/views/admin/WaitingListPanelView.vue'));
@@ -29,7 +29,7 @@ type ApmtRouteMeta = {
 };
 
 /**
- * Defined routes for Thunderbird Appointment
+ * Defined routes for Site Visit Scheduling
  * Note: All routes require authentication unless otherwise specified in App.vue::routeIsPublic
  */
 const routes: RouteRecordRaw[] = [
@@ -37,10 +37,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'home',
-    component: HomeView,
-    meta: {
-      isPublic: true,
-    },
+    redirect: { name: 'dashboard' },
   },
   {
     path: '/login',
@@ -55,12 +52,31 @@ const routes: RouteRecordRaw[] = [
     name: 'logout',
     component: LogoutView,
   },
+  // {
+  //   path: '/waiting-list',
+  //   name: 'join-the-waiting-list',
+  //   component: LoginView,
+  //   meta: {
+  //     isPublic: true,
+  //   },
+  // },
   {
-    path: '/waiting-list',
-    name: 'join-the-waiting-list',
-    component: LoginView,
+    path: '/in-widget',
+    name: 'in-widget',
+    component: InWidgetView,
     meta: {
       isPublic: true,
+      noLayout: true,
+    },
+  },
+  {
+    path: '/widget/user/:username/:signatureOrSlug',
+    name: 'availability-widget',
+    component: BookingWidgetView,
+    meta: {
+      isPublic: true,
+      maskForMetrics: true,
+      noLayout: true,
     },
   },
   {
@@ -158,15 +174,6 @@ const routes: RouteRecordRaw[] = [
     path: '/setup',
     name: 'setup',
     component: FirstTimeUserExperienceView,
-  },
-  {
-    path: '/waiting-list/:token',
-    name: 'waiting-list',
-    component: WaitingListActionView,
-    meta: {
-      isPublic: true,
-      maskForMetrics: true,
-    },
   },
   // Admin
   {

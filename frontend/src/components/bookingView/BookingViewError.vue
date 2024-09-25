@@ -18,8 +18,7 @@ defineProps<Props>();
 </script>
 
 <template>
-  <art-invalid-link class="my-6 h-auto max-w-sm"/>
-  <div class="text-xl font-semibold text-sky-600">
+  <div class="text-xl font-semibold text-gray-700">
     {{ heading ?? t('error.somethingWentWrong') }}
   </div>
   <div class="text-gray-800 dark:text-gray-300">

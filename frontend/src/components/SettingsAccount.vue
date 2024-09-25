@@ -293,13 +293,13 @@ const actuallyDeleteAccount = async () => {
       <div class="mt-6 flex gap-4 self-end">
         <secondary-button
           :label="t('label.refreshLink')"
-          class="btn-refresh !text-teal-500"
+          class="btn-refresh !text-blue-700"
           @click="refreshLink"
           :title="t('label.refresh')"
         />
-        <secondary-button
+        <primary-button
           :label="t('label.saveChanges')"
-          class="btn-save !text-teal-500"
+          class="btn-save"
           @click="updateUserCheckForConfirmation"
           :title="t('label.save')"
         />

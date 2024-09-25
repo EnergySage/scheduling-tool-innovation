@@ -53,7 +53,7 @@ const toggleState = () => {
         <icon-circle-dot-filled
           class="size-4 rounded-full text-gray-400 duration-300 peer-checked:translate-x-4 dark:text-gray-300"
           :class="{
-            'peer-checked:text-teal-500': !disabled,
+            'peer-checked:text-blue-700': !disabled,
             'peer-checked:text-gray-400': disabled,
           }"
         />

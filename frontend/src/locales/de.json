@@ -2,7 +2,7 @@
   "app": {
     "summary": "Lass Freunde und Kollegen Zeiten in deinem Kalender wählen. Terminabsprachen so simpel wie möglich.",
     "tagline": "Weniger planen, mehr schaffen",
-    "title": "Thunderbird Appointment"
+    "title": "Site Visit Scheduling"
   },
   "error": {
     "actionNeeded": "Aktion erforderlich!",
@@ -216,7 +216,7 @@
     "end": "Ende",
     "endDate": "Enddatum",
     "endTime": "Endzeit",
-    "enterEmailToInvite": "Per E-Mail-Adresse zu Thunderbird Appointment einladen:",
+    "enterEmailToInvite": "Per E-Mail-Adresse zu Site Visit Scheduling einladen:",
     "error": "Fehler",
     "faq": "FAQ",
     "farthestBooking": "Späteste Buchung",
@@ -368,15 +368,15 @@
   },
   "settings": {
     "invite": {
-      "brief": "Nachfolgend gibt es Einladungscodes für Thunderbird Appointment. Diese können gerne an Freunde weitergegeben und ihnen für die Anmeldung genutzt werden."
+      "brief": "Nachfolgend gibt es Einladungscodes für Site Visit Scheduling. Diese können gerne an Freunde weitergegeben und ihnen für die Anmeldung genutzt werden."
     }
   },
   "text": {
-    "accountDataNotice": "Lade all deine Daten von Thunderbird Appointment herunter.",
-    "accountDeletionWarning": "Achtung: Die Löschung des Benutzerkontos ist dauerhaft! Du wirst all deine Daten von Thunderbird Appointment verlieren. Deine verbundenen Kalender bleiben selbstverständlich unverändert. Du kannst jederzeit ein neues Benutzerkonto erstellen.",
+    "accountDataNotice": "Lade all deine Daten von Site Visit Scheduling herunter.",
+    "accountDeletionWarning": "Achtung: Die Löschung des Benutzerkontos ist dauerhaft! Du wirst all deine Daten von Site Visit Scheduling verlieren. Deine verbundenen Kalender bleiben selbstverständlich unverändert. Du kannst jederzeit ein neues Benutzerkonto erstellen.",
     "bookingsWillAutomaticallyBeConfirmed": "Buchungen werden automatisch bestätigt und zum Kalender hinzugefügt.",
     "bookingsWillRequireToBeConfirmed": "Buchungen müssen bestätigt oder abgelehnt werden.",
-    "calendarDeletionWarning": "Wenn die Verbindung zu diesem Kalender getrennt wird, werden alle Termine und Zeitpläne aus Thunderbird Appointment entfernt. Es werden keine Termine entfernt, die derzeit in diesem Kalender gespeichert sind.",
+    "calendarDeletionWarning": "Wenn die Verbindung zu diesem Kalender getrennt wird, werden alle Termine und Zeitpläne aus Site Visit Scheduling entfernt. Es werden keine Termine entfernt, die derzeit in diesem Kalender gespeichert sind.",
     "chooseDateAndTime": "Wähle Tag und Zeit für ein Treffen.",
     "connectZoom": "Du kannst dein Zoom-Konto verbinden, um Besprechungen direkt mit einer Zoom-Einladung zu erstellen.",
     "contactRequestForm": "Bitte verwende das nachstehende Kontaktformular, um Feedback, Fragen oder Anliegen an unser Support-Team zu senden. Wir werden ggf. versuchen, so schnell wie möglich zu antworten.",
@@ -384,21 +384,21 @@
     "denialSentToAddress": "Die Informationen über die Ablehnung der Anfrage wurde per E-Mail an {address} geschickt.",
     "disclaimerGABooking": "Bitte beachten: Der Eigentümer muss die Buchung bestätigen.",
     "googlePermissionCalendarName": "Anzeigen und Herunterladen aller Kalender des Google-Kontos",
-    "googlePermissionCalendarReason": "Thunderbird Appointment benötigt diese Berechtigung, um eine Liste von Kalendern anzuzeigen, die verbunden werden können.",
-    "googlePermissionDisclaimer": "Thunderbird Appointment benötigt die folgenden Berechtigungen von Google, um korrekt zu funktionieren",
-    "googlePermissionEventReason": "Thunderbird Appointment benötigt diese Berechtigung, um Termine zu verbundenen Google-Kalendern hinzuzufügen.",
+    "googlePermissionCalendarReason": "Site Visit Scheduling benötigt diese Berechtigung, um eine Liste von Kalendern anzuzeigen, die verbunden werden können.",
+    "googlePermissionDisclaimer": "Site Visit Scheduling benötigt die folgenden Berechtigungen von Google, um korrekt zu funktionieren",
+    "googlePermissionEventReason": "Site Visit Scheduling benötigt diese Berechtigung, um Termine zu verbundenen Google-Kalendern hinzuzufügen.",
     "googlePermissionEventsName": "Anzeigen und Bearbeiten von Terminen in allen Kalendern",
     "homepage": {
       "calendarCopy": "Verbinde deine Kalender und finde alle deine Termine an einem Ort. Buche einmalige oder wiederkehrende Veranstaltungen und lade andere dazu ein.",
       "copywrite": "Thunderbird gehört nun zu {mzlaLink}, eine vollständige Tochtergesellschaft der Mozilla Foundation. Teile dieses Inhalts sind ©1998-2024 von einzelnen Mitwirkenden. Der Inhalt ist unter einem {creativeCommonsLink} verfügbar.",
       "creativeCommonsLinkText": "Creative-Commons-Lizenz",
-      "intro": "Thunderbird Appointment macht Termine finden zum Kinderspiel. Spar dir den Aufwand und gestalte deinen Tag effizienter.",
+      "intro": "Site Visit Scheduling macht Termine finden zum Kinderspiel. Spar dir den Aufwand und gestalte deinen Tag effizienter.",
       "mzlaLinkText": "MZLA Technologies Corporation",
       "planEventBody": "Mit mehreren Möglichkeiten, Meetings zu organisieren und einzurichten.",
       "planEventTitle": "Einen Termin planen",
       "scheduleCopy": "Du musst ein Treffen mit einem Kunden organisieren? Schicke einfach deine allgemeine Verfügbarkeit. Kein Grund mehr, mit dem Kalender zu jonglieren.",
-      "screenshotCalendarAlt": "Ein Screenshot der Kalenderansicht von Thunderbird Appointment.",
-      "screenshotScheduleAlt": "Ein Screenshot der Verfügbarkeitsansicht von Thunderbird Appointment.",
+      "screenshotCalendarAlt": "Ein Screenshot der Kalenderansicht von Site Visit Scheduling.",
+      "screenshotScheduleAlt": "Ein Screenshot der Verfügbarkeitsansicht von Site Visit Scheduling.",
       "sectionHeader": "Einfache Terminplanung für alle",
       "setAvailabilityBody": "Lege fest, wann und wie deine Zeit gebucht wird.",
       "setAvailabilityTitle": "Definiere deine Verfügbarkeit",
@@ -426,11 +426,11 @@
     "settings": {
       "connectedAccounts": {
         "connect": {
-          "fxa": "Dies ist das Benutzerkonto, das mit dem Login verbunden ist. Wenn das Mozilla-Konto gelöscht wird, werden auch alle Daten bei Thunderbird Appointment entfernt.",
-          "google": "Ein Google-Konto kann verbunden werden, um auf die Kalender zuzugreifen. Wenn die Verbindung zum Google-Konto getrennt wird, werden die entsprechenden Kalender und die damit verbundenen Daten bei Thunderbird Appointment entfernt.",
+          "fxa": "Dies ist das Benutzerkonto, das mit dem Login verbunden ist. Wenn das Mozilla-Konto gelöscht wird, werden auch alle Daten bei Site Visit Scheduling entfernt.",
+          "google": "Ein Google-Konto kann verbunden werden, um auf die Kalender zuzugreifen. Wenn die Verbindung zum Google-Konto getrennt wird, werden die entsprechenden Kalender und die damit verbundenen Daten bei Site Visit Scheduling entfernt.",
           "googleLegal": {
             "link": "Google API Services User Data Policy",
-            "text": "Die Nutzung von Thunderbird Appointment und die Weitergabe von Informationen, die per Google APIs übertragen wurden, an eine andere App erfolgt unter Einhaltung der {0}, einschließlich der Anforderungen für die begrenzte Nutzung."
+            "text": "Die Nutzung von Site Visit Scheduling und die Weitergabe von Informationen, die per Google APIs übertragen wurden, an eine andere App erfolgt unter Einhaltung der {0}, einschließlich der Anforderungen für die begrenzte Nutzung."
           },
           "zoom": "Ein Zoom-Konto kann verbunden werden, um Einladungen zu Zoom-Besprechungen an Terminen zu ermöglichen."
         },
@@ -438,7 +438,7 @@
           "google": {
             "cancel": "Abbrechen",
             "confirm": "Trennen",
-            "message": "Beim Trennen der Verbindung zu Google-Kalendern werden alle verfügbaren Google-Kalender und die zugehörigen Daten vom Thunderbird Appointment Konto entfernt. Wenn ein Terminplan mit einem Google-Kalender eingerichtet ist, wird er deaktiviert, bis der Terminplan auf einen neuen Kalender eingestellt wurde.",
+            "message": "Beim Trennen der Verbindung zu Google-Kalendern werden alle verfügbaren Google-Kalender und die zugehörigen Daten vom Site Visit Scheduling Konto entfernt. Wenn ein Terminplan mit einem Google-Kalender eingerichtet ist, wird er deaktiviert, bis der Terminplan auf einen neuen Kalender eingestellt wurde.",
             "title": "Google Kalender trennen"
           },
           "zoom": {
@@ -474,7 +474,7 @@
     "leaveInfo": "Deine E-Mail-Adresse wurde erfolgreich von unserer Warteliste entfernt. Falls du deine Meinung änderst, kannst du dich jederzeit wieder auf die Warteliste setzen lassen.",
     "marketing": [
       "Behalte deinen Kalender, teile deine Zeit.",
-      "Thunderbird Appointment vereinfacht die Art und Weise gemeinsamer Terminfindung, um durch weniger Planen mehr Zeit für die wichtigen Dinge zu haben."
+      "Site Visit Scheduling vereinfacht die Art und Weise gemeinsamer Terminfindung, um durch weniger Planen mehr Zeit für die wichtigen Dinge zu haben."
     ],
     "signUpAlreadyExists": "Du bist bereits auf der Warteliste.",
     "signUpCheckYourEmail": "Weitere Informationen findest Du in Deiner E-Mail.",

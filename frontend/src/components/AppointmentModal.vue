@@ -16,7 +16,7 @@ import {
   IconX,
 } from '@tabler/icons-vue';
 import PrimaryButton from '@/elements/PrimaryButton.vue';
-import CautionButton from '@/elements/CautionButton.vue';
+import SecondaryButton from '@/elements/SecondaryButton.vue';
 import { useUserStore } from '@/stores/user-store';
 import { dayjsKey } from '@/keys';
 
@@ -118,7 +118,7 @@ const emit = defineEmits(['close']);
             <a
               v-if="appointment.location_url"
               :href="appointment.location_url"
-              class="text-teal-500 underline underline-offset-2"
+              class="text-blue-700 underline underline-offset-2"
               target="_blank"
             >
               {{ appointment.location_url }}
@@ -143,7 +143,7 @@ const emit = defineEmits(['close']);
         </div>
         <template v-for="s in attendeesSlots" :key="s.start">
           <div class="flex items-center gap-2 pl-6">
-            <div class="relative size-6 rounded-full bg-teal-500">
+            <div class="relative size-6 rounded-full bg-blue-700">
               <div class="position-center absolute text-xs text-white">{{ initials(s.attendee.name) }}</div>
             </div>
             {{ s.attendee.email }}
@@ -169,9 +169,9 @@ const emit = defineEmits(['close']);
           <primary-button class="btn-confirm" @click="answer(true)" :title="t('label.confirm')">
             {{ t('label.confirmBooking') }}
           </primary-button>
-          <caution-button class="btn-deny" @click="answer(false)" :title="t('label.deny')">
+          <secondary-button class="btn-deny" @click="answer(false)" :title="t('label.deny')">
             {{ t('label.denyBooking') }}
-          </caution-button>
+          </secondary-button>
         </div>
       </div>
       <div class="p-6" v-if="appointment?.slots[0].booking_status === BookingStatus.Booked">

@@ -290,18 +290,18 @@ onMounted(async () => {
     >
       {{ notificationMessage }}
     </site-notification>
-    <nav-bar v-if="isAuthenticated" :nav-items="navItems"/>
+    <nav-bar v-if="isAuthenticated && !route.meta?.noLayout" :nav-items="navItems"/>
     <title-bar v-if="routeIsPublic"/>
     <main
       :class="{
         'mx-4 min-h-full py-32 lg:mx-8': !routeIsHome && !routeIsPublic,
-        '!pt-24': routeIsHome || isAuthenticated,
+        '!pt-24': routeIsHome || (isAuthenticated && !route.meta?.noLayout),
         'min-h-full': routeIsPublic && !routeHasModal,
       }"
     >
       <router-view/>
     </main>
-    <footer-bar/>
+    <footer-bar v-if="!route.meta?.noLayout"/>
   </template>
   <template v-else-if="router.hasRoute(route.name) && !routeIsPublic">
     <not-authenticated-view/>
