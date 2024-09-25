@@ -32,14 +32,14 @@ defineProps<Props>();
     <div
       class="relative mx-auto w-6 rounded-full text-center"
       :class="{
-        'bg-teal-500 font-semibold text-white': isToday,
-        'text-teal-500': isSelected && !isToday,
-        'group-hover/day:bg-sky-600': isToday && !disabled,
-        'group-hover/day:text-sky-600': !isToday && !disabled,
+        'bg-blue-500 font-semibold text-white': isToday,
+        'text-blue-500': isSelected && !isToday,
+        'group-hover/day:bg-blue-700': isToday && !disabled,
+        'group-hover/day:text-blue-700': !isToday && !disabled,
       }"
     >
       {{ dj(day).format('D') }}
-      <div v-if="hasEvents" class="absolute -bottom-1 left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-teal-600"></div>
+      <div v-if="hasEvents" class="absolute -bottom-1 left-1/2 size-1.5 -translate-x-1/2 rounded-full bg-blue-600"></div>
     </div>
   </div>
 </template>

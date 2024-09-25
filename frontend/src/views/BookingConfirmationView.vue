@@ -55,8 +55,7 @@ onMounted(async () => {
       <loading-spinner />
     </div>
     <div v-else-if="isError === true" class="flex-center flex-col gap-8 px-4">
-      <art-invalid-link class="my-6 h-auto max-w-sm" />
-      <div class="text-xl font-semibold text-sky-600">
+      <div class="text-xl font-semibold text-gray-700">
         {{ t('info.bookingLinkIsInvalid') }}
       </div>
       <div class="text-gray-800 dark:text-gray-300">
@@ -66,7 +65,7 @@ onMounted(async () => {
     <div v-else class="flex-center flex-col gap-8 px-4">
       <art-successful-booking class="my-6 h-auto max-w-sm" />
       <template v-if="confirmed">
-        <div class="text-xl font-semibold text-sky-600">
+        <div class="text-xl font-semibold text-gray-700">
           {{ t('info.bookingSuccessfullyConfirmed') }}
         </div>
         <div class="text-center text-gray-800 dark:text-gray-300">
@@ -75,7 +74,7 @@ onMounted(async () => {
         </div>
       </template>
       <template v-else>
-        <div class="text-xl font-semibold text-sky-600">
+        <div class="text-xl font-semibold text-gray-700">
           {{ t('info.bookingSuccessfullyDenied') }}
         </div>
         <div class="text-center text-gray-800 dark:text-gray-300">

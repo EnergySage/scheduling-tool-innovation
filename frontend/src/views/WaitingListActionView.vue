@@ -65,7 +65,6 @@ onMounted(async () => {
   <home-view></home-view>
   <generic-modal :error-message="errorMsg">
     <template v-slot:header>
-      <word-mark/>
       <h2 id="title" v-if="isError">
         {{ t('waitingList.errorHeading') }}
       </h2>

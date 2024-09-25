@@ -38,7 +38,7 @@ const emit = defineEmits(['close']);
       'bg-rose-500 dark:bg-rose-800': scheme === AlertSchemes.Error,
       'bg-orange-500 dark:bg-orange-800': scheme === AlertSchemes.Warning,
       'bg-green-500 dark:bg-green-800': scheme === AlertSchemes.Success,
-      'bg-teal-500 dark:bg-teal-800': scheme === AlertSchemes.Info,
+      'bg-blue-700 dark:bg-teal-800': scheme === AlertSchemes.Info,
     }"
   >
     {{ title }}

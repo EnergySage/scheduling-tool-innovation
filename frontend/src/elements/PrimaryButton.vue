@@ -31,17 +31,17 @@ const copyToClipboard = async () => {
 <template>
   <button
     class="
-      relative flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-gradient-to-br
-      from-teal-400 to-sky-600 px-6 text-base font-semibold text-white transition-all ease-in-out
-      hover:scale-102 hover:shadow-md active:scale-98 enabled:hover:from-sky-400 enabled:hover:to-teal-600
-      disabled:scale-100 disabled:opacity-50 disabled:shadow-none
+      relative flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-lg
+      bg-blue-600 px-6 text-base font-semibold text-white transition-all ease-in-out
+      hover:shadow-md enabled:hover:bg-blue-700
+      disabled:bg-gray-200 disabled:text-gray-500 disabled:shadow-none
     "
     :class="{ '!text-transparent': waiting }"
     @click="copy ? copyToClipboard() : null"
   >
     <div
       v-if="waiting"
-      class="absolute size-5 animate-spin rounded-full border-2 border-white border-t-transparent"
+      class="absolute size-5 animate-spin rounded-lg border-2 border-white border-t-transparent"
     ></div>
     <icon-copy
       v-if="copy && !copied"

@@ -10,7 +10,7 @@ defineProps<Props>();
 ">
     <div class="m-4 flex h-16 gap-4">
       <!--<img class="w-[64px] h-[64px]" src="@/assets/svg/icon-wand.svg"/>-->
-      <h3 class="my-auto text-2xl text-teal-600 dark:text-teal-400">{{ title }}</h3>
+      <h3 class="my-auto text-2xl text-blue-600 dark:text-blue-400">{{ title }}</h3>
     </div>
     <div class="m-4 mb-8">
       <p class="text-lg leading-loose"><slot></slot></p>

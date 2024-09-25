@@ -62,17 +62,17 @@ const eventDateTime = computed(
       }"
     ></div>
     <div class="flex flex-col gap-2 text-gray-700 dark:text-gray-200">
-      <div class="max-w-sm truncate text-lg font-semibold text-teal-500">{{ event?.title }}</div>
+      <div class="max-w-sm truncate text-lg font-semibold text-blue-700">{{ event?.title }}</div>
       <div class="flex items-center gap-1.5 text-xs">
-        <icon-clock class="size-4 fill-transparent stroke-teal-500 stroke-2" />
+        <icon-clock class="size-4 fill-transparent stroke-blue-700 stroke-2" />
         {{ eventDateTime }}
       </div>
       <div class="flex items-center gap-1.5 text-xs">
-        <icon-calendar class="size-4 fill-transparent stroke-teal-500 stroke-2" />
+        <icon-calendar class="size-4 fill-transparent stroke-blue-700 stroke-2" />
         {{ event?.customData?.calendar_title }}
       </div>
       <div v-if="event?.customData?.attendee" class="flex items-center gap-1.5 text-xs">
-        <icon-users class="size-4 fill-transparent stroke-teal-500 stroke-2" />
+        <icon-users class="size-4 fill-transparent stroke-blue-700 stroke-2" />
         {{ t('label.guest' , { 'count': 1 }) }}
       </div>
     </div>

@@ -37,7 +37,7 @@ const emit = defineEmits(['close', 'confirm', 'error']);
     <div class="btn-close absolute right-8 top-8 cursor-pointer" @click="emit('close')" :title="t('label.close')">
       <icon-x class="size-6 fill-transparent stroke-gray-700 stroke-1 dark:stroke-gray-400" />
     </div>
-    <div class="text-2xl font-semibold text-teal-500">
+    <div class="text-2xl font-semibold text-blue-700">
       {{ title }}
     </div>
     <div class="max-w-sm text-center">

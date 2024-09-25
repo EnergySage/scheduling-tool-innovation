@@ -2,13 +2,13 @@
   <div class="select-none">
     <div v-if="nav" class="flex-center mb-2 select-none gap-2">
       <div @click="dateNav(false)" class="btn-back group cursor-pointer" :title="t('label.goBack')">
-        <icon-chevron-left class="size-6 fill-transparent stroke-slate-400 stroke-2 group-hover:stroke-teal-500" />
+        <icon-chevron-left class="size-6 fill-transparent stroke-slate-400 stroke-2 group-hover:stroke-blue-700" />
       </div>
-      <div class="text-lg font-semibold text-teal-500">
+      <div class="text-lg font-semibold text-blue-700">
         {{ navDate.format('MMMM YYYY')}}
       </div>
       <div @click="dateNav(true)" class="btn-forward group cursor-pointer" :title="t('label.goForward')">
-        <icon-chevron-right class="size-6 fill-transparent stroke-slate-400 stroke-2 group-hover:stroke-teal-500" />
+        <icon-chevron-right class="size-6 fill-transparent stroke-slate-400 stroke-2 group-hover:stroke-blue-700" />
       </div>
     </div>
     <div class="

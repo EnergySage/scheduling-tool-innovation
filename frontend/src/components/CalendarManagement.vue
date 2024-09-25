@@ -32,7 +32,7 @@ const filteredCalendars = computed(() => props.calendars.filter((calendar: Calen
     <div class="text-xl">{{ title }}</div>
     <div class="mx-auto mr-0 inline-flex" v-if="type === CalendarManagementType.Connect">
       <secondary-button
-        class="btn-sync text-sm !text-teal-500 disabled:scale-100 disabled:opacity-50 disabled:shadow-none"
+        class="btn-sync text-sm !text-blue-700 disabled:scale-100 disabled:opacity-50 disabled:shadow-none"
         :disabled="loading"
         @click="emit('sync')"
         :title="t('label.sync')"
@@ -57,7 +57,7 @@ const filteredCalendars = computed(() => props.calendars.filter((calendar: Calen
         @click="emit('modify', cal.id)"
         :disabled="loading"
         class="
-          btn-conntect ml-auto flex items-center gap-0.5 rounded-full bg-teal-500 px-2 py-1
+          btn-conntect ml-auto flex items-center gap-0.5 rounded-full bg-blue-700 px-2 py-1
           text-xs text-white disabled:scale-100 disabled:opacity-50 disabled:shadow-none
         "
         :title="t('label.connect')"
@@ -70,7 +70,7 @@ const filteredCalendars = computed(() => props.calendars.filter((calendar: Calen
         @click="emit('modify', cal.id)"
         :disabled="loading"
         class="
-          btn-edit ml-auto flex items-center gap-0.5 rounded-full bg-teal-500 px-2 py-1
+          btn-edit ml-auto flex items-center gap-0.5 rounded-full bg-blue-700 px-2 py-1
           text-xs text-white disabled:scale-100 disabled:opacity-50 disabled:shadow-none
         "
         :title="t('label.edit')"

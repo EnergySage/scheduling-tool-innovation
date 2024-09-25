@@ -14,11 +14,10 @@ defineProps<Props>();
 <template>
   <button
     class="
-      relative flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-full
-      bg-gradient-to-br from-rose-400 to-rose-600 px-6 text-base font-semibold
-      text-white shadow-black transition-all ease-in-out hover:scale-102 hover:shadow-md
-      active:scale-98 enabled:hover:from-rose-600 enabled:hover:to-rose-600 disabled:scale-100 disabled:opacity-50 disabled:shadow-none
-      dark:from-rose-600 dark:to-rose-900
+      relative flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-lg
+      bg-rose-600 px-6 text-base font-semibold text-white transition-all ease-in-out 
+      hover:shadow-md enabled:hover:bg-rose-700 disabled:opacity-50 disabled:shadow-none
+      dark:bg-rose-900
     "
     :class="{ '!text-transparent': waiting }"
   >

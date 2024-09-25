@@ -273,14 +273,14 @@ onMounted(async () => {
     <div class="flex gap-4">
       <secondary-button
         :label="t('label.addCalendar', { provider: t('label.google') })"
-        class="btn-add text-sm !text-teal-500"
+        class="btn-add text-sm !text-blue-700"
         @click="addCalendar(CalendarProviders.Google)"
         :disabled="inputMode"
         :title="t('label.addCalendar', { provider: t('label.google') })"
       />
       <secondary-button
         :label="t('label.addCalendar', { provider: t('label.caldav') })"
-        class="btn-add text-sm !text-teal-500"
+        class="btn-add text-sm !text-blue-700"
         @click="addCalendar(CalendarProviders.Caldav)"
         :disabled="inputMode"
         :title="t('label.addCalendar', { provider: t('label.caldav') })"
@@ -319,7 +319,7 @@ onMounted(async () => {
       <div>
         <secondary-button
           :label="'Search for calendars'"
-          class="btn-search text-sm !text-teal-500"
+          class="btn-search text-sm !text-blue-700"
           :waiting="processPrincipal"
           @click="getRemoteCalendars"
           :title="t('label.search')"
@@ -331,7 +331,7 @@ onMounted(async () => {
           <div>{{ cal.url }}</div>
           <button
             @click="assignCalendar(cal.title, cal.url)"
-            class="btn-assign ml-auto flex items-center gap-0.5 rounded-full bg-teal-500 px-2 py-1 text-xs text-white"
+            class="btn-assign ml-auto flex items-center gap-0.5 rounded-full bg-blue-700 px-2 py-1 text-xs text-white"
             :title="t('label.assign')"
           >
             <icon-arrow-right class="size-3.5 fill-transparent stroke-white stroke-2" />
@@ -421,7 +421,7 @@ onMounted(async () => {
         <div class="flex gap-4 self-end">
         <secondary-button
           :label="t('label.cancel')"
-          class="btn-cancel text-sm !text-teal-500"
+          class="btn-cancel text-sm !text-blue-700"
           @click="resetInput"
           :title="t('label.cancel')"
         />

@@ -4,7 +4,7 @@
       <div class="flex items-center gap-3">
         <img class="mr-2 h-8 pl-4" src="/appointment_logo.svg" alt="Appointment Logo"/>
         <div class="font-display text-lg uppercase tracking-[.25em] text-white">
-          Thunderbird Appointment
+          Site Visit Scheduling
         </div>
       </div>
     </div>

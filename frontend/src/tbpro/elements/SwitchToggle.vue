@@ -49,14 +49,14 @@ const toggleState = () => {
 .component-container {
   /* Colour definitions */
   --colour-base: #E4E4E7;
-  --colour-active: #008080;
+  --colour-active: #1D3297;
   --colour-inactive: #FEFFFF;
   --colour-highlight: #FEFFFF;
   --colour-border-intense: #777580;
   
   html.dark & {
     --colour-base: #737584;
-    --colour-active: #A3ECE3;
+    --colour-active: #A7C9FF;
     --colour-inactive: #FEFFFF;
     --colour-highlight: #1A202C;
     --colour-border-intense: #777580;

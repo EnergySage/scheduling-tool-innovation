@@ -6,7 +6,7 @@ export default {
   content: ['./public/index.html', './src/**/*.{vue,ts,js}'],
   theme: {
     fontFamily: {
-      sans: ['"Open Sans"', ...defaultTheme.fontFamily.sans],
+      sans: ['"Plus Jakarta Sans"', ...defaultTheme.fontFamily.sans],
       display: ['"Raleway"', ...defaultTheme.fontFamily.sans],
       roboto: ['"Roboto"', ...defaultTheme.fontFamily.sans],
     },
@@ -42,6 +42,18 @@ export default {
           800: '#991b1b',
           900: '#7f1d1d',
         },
+        'blue': {
+          50: '#DDEDFF',
+          100: '#C8DFFF',
+          200: '#A7C9FF',
+          300: '#85B2FF',
+          400: '#688AEA',
+          500: '#4A62D4',
+          600: '#2E46B9',
+          700: '#1D3297',
+          800: '#162676',
+          900: '#1B1763',
+        }
       },
     },
   },

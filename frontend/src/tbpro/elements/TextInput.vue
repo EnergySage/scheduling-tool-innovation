@@ -170,7 +170,7 @@ const onChange = () => {
   }
 
   .tbpro-input-element {
-    --colour-btn-border: var(--colour-neutral-border);
+    --colour-btn-border: var(--colour-ti-base);
     width: 100%;
     transition-property: none;
     font-size: var(--txt-input);

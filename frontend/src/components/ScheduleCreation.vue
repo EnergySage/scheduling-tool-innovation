@@ -427,7 +427,7 @@ watch(
 <template>
   <div class="sticky top-24 flex flex-col gap-4 rounded-2xl bg-zinc-100 dark:bg-gray-600">
     <div class="flex flex-col gap-4 px-1 py-4">
-      <div class="flex items-center justify-around text-center text-xl font-semibold text-teal-500">
+      <div class="flex items-center justify-around text-center text-xl font-semibold text-blue-700">
         <span class="pl-3">{{ t("heading.generalAvailability") }}</span>
         <switch-toggle
           v-if="existing"
@@ -726,7 +726,7 @@ watch(
                 :small-text="true"
                 maxLength="16"
               />
-              <refresh-icon class="mt-2.5 cursor-pointer text-teal-600" @click.prevent="refreshSlug" />
+              <refresh-icon class="mt-2.5 cursor-pointer text-blue-700" @click.prevent="refreshSlug" />
             </div>
           </label>
           <!-- option to deactivate confirmation -->
@@ -802,7 +802,7 @@ watch(
           <primary-button
             class="btn-save w-1/2"
             @click="saveSchedule(!existing)"
-            :disabled="!scheduleInput.active"
+            :disabled="!scheduleInput.active || savingInProgress"
           >
             {{ t('label.save') }}
           </primary-button>

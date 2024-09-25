@@ -9,8 +9,7 @@ const { t } = useI18n();
 <template>
   <div class="flex-center h-full flex-col gap-12 p-4">
     <div class="flex-center flex-col gap-8 px-4">
-      <art-invalid-link class="my-6 h-auto max-w-sm"/>
-      <div class="text-xl font-semibold text-sky-600">
+      <div class="text-xl font-semibold text-gray-700">
         {{ t('error.routeNotFound') }}
       </div>
       <primary-button class="btn-back" @click="$router.go(-1)" :title="t('label.goBack')">

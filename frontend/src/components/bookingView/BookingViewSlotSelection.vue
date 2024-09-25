@@ -48,18 +48,18 @@ const selectEvent = (day: string) => {
 
 <template>
   <div v-if="appointment">
-    <div class="mb-4 text-3xl text-gray-700 dark:text-gray-400">
+    <!-- <div class="mb-4 text-3xl text-gray-700 dark:text-gray-400">
       {{ appointment.title }}
-    </div>
-    <div class="mb-4 font-semibold">
+    </div> -->
+    <!-- <div class="mb-4 font-semibold">
       {{ t('text.nameIsInvitingYou', { name: appointment.owner_name }) }}
-    </div>
+    </div> -->
     <div v-if="appointment.details" class="mb-6 text-gray-700 dark:text-gray-400">
       {{ appointment.details }}
     </div>
     <div class="mb-6 flex flex-col items-center justify-between md:flex-row">
       <div class="text-xl">{{ t('text.chooseDateAndTime') }}</div>
-      <div class="text-sm text-teal-600 dark:text-teal-500">
+      <div class="text-sm text-blue-700 dark:text-blue-60">
         {{ t('text.timesAreDisplayedInLocalTimezone', { timezone: dj.tz.guess() }) }}
       </div>
     </div>
