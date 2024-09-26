@@ -5,6 +5,7 @@ import uuid
 from datetime import timedelta, datetime, UTC
 from secrets import token_urlsafe
 from typing import Annotated
+from ..routes.api import sync_remote_calendars
 from fastapi import Request
 import argon2.exceptions
 import jwt
@@ -424,5 +425,7 @@ def login_or_create_user(request: Request, db: Session = Depends(get_db)):
     db.add(subscriber)
     db.commit()
     db.refresh(subscriber)
+
+    sync_remote_calendars(db, subscriber)
 
     return subscriber
