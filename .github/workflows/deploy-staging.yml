@@ -50,7 +50,7 @@ jobs:
     environment: staging
     runs-on: ubuntu-latest
     env:
-      TF_VAR_region: ${{ vars.AWS_REGION }}
+      TF_VAR_region: us-east-1
       TF_VAR_environment: ${{ vars.ENV_SHORT_NAME }}
       TF_VAR_name_prefix: "tb-${{ vars.PROJECT_SHORT_NAME }}-${{ vars.ENV_SHORT_NAME }}"
       TF_VAR_frontend_url: ${{ vars.FRONTEND_URL }}
@@ -72,11 +72,11 @@ jobs:
           terragrunt -v
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: ${{ secrets.IAM_ROLE }}
-          role-session-name: Appointment_GitHub_to_AWS_via_FederatedOIDC
-          aws-region: ${{ vars.AWS_REGION }}
+          aws-access-key-id: ${{ secrets.INSTALLER_DEV_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.INSTALLER_DEV_AWS_SECRET_KEY }}
+          aws-region: us-east-1
 
       - name: vpc
         working-directory: ./tofu/environments/stage/network/vpc
@@ -170,11 +170,11 @@ jobs:
           arch: amd64
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: ${{ secrets.IAM_ROLE }}
-          role-session-name: Appointment_GitHub_to_AWS_via_FederatedOIDC
-          aws-region: ${{ vars.AWS_REGION }}
+          aws-access-key-id: ${{ secrets.INSTALLER_DEV_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.INSTALLER_DEV_AWS_SECRET_KEY }}
+          aws-region: us-east-1
 
       - name: Get frontend bucket & distribution
         id: get-frontend-resources
@@ -199,11 +199,11 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: ${{ secrets.IAM_ROLE }}
-          role-session-name: Appointment_GitHub_to_AWS_via_FederatedOIDC
-          aws-region: ${{ vars.AWS_REGION }}
+          aws-access-key-id: ${{ secrets.INSTALLER_DEV_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.INSTALLER_DEV_AWS_SECRET_KEY }}
+          aws-region: us-east-1
 
       - name: Login to Amazon ECR
         id: login-ecr
@@ -289,11 +289,11 @@ jobs:
           echo ecr_tag=$output >> $GITHUB_OUTPUT
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: ${{ secrets.IAM_ROLE }}
-          role-session-name: Appointment_GitHub_to_AWS_via_FederatedOIDC
-          aws-region: ${{ vars.AWS_REGION }}
+          aws-access-key-id: ${{ secrets.INSTALLER_DEV_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.INSTALLER_DEV_AWS_SECRET_KEY }}
+          aws-region: us-east-1
 
       - name: deploy backend-service
         working-directory: ./tofu/environments/stage/services/backend-service
