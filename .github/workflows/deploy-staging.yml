@@ -61,7 +61,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: AWS login with DEV credentials
-        uses: aws-actions/configure-aws-credentials@v3
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.INSTALLER_DEV_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.INSTALLER_DEV_AWS_SECRET_KEY }}
@@ -148,7 +148,7 @@ jobs:
         with:
           node-version: '20.x'
       - name: AWS login with DEV credentials
-        uses: aws-actions/configure-aws-credentials@v3
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.INSTALLER_DEV_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.INSTALLER_DEV_AWS_SECRET_KEY }}
@@ -214,7 +214,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: AWS login with DEV credentials
-        uses: aws-actions/configure-aws-credentials@v3
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.INSTALLER_DEV_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.INSTALLER_DEV_AWS_SECRET_KEY }}
@@ -283,7 +283,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: AWS login with DEV credentials
-        uses: aws-actions/configure-aws-credentials@v3
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.INSTALLER_DEV_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.INSTALLER_DEV_AWS_SECRET_KEY }}
@@ -319,7 +319,7 @@ jobs:
           echo ecr_tag=$output >> $GITHUB_OUTPUT
 
       - name: AWS login with DEV credentials
-        uses: aws-actions/configure-aws-credentials@v3
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.INSTALLER_DEV_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.INSTALLER_DEV_AWS_SECRET_KEY }}
