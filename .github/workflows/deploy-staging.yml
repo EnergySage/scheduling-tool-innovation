@@ -60,6 +60,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: AWS login with DEV credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.INSTALLER_DEV_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.INSTALLER_DEV_AWS_SECRET_KEY }}
+          aws-region: us-east-1
+      - run: |-
+          aws codeartifact login --tool pip --domain energysage --domain-owner 659694780082 --repository cloud-engineering
+          aws codeartifact login --tool npm --domain energysage --domain-owner 659694780082 --repository cloud-engineering
+          poetry config http-basic.codeartifact aws $(aws codeartifact get-authorization-token --domain energysage --domain-owner 659694780082 --query authorizationToken --output text)
+      
       - name: install opentofu
         uses: opentofu/setup-opentofu@v1
         with: 
@@ -71,13 +82,6 @@ jobs:
           sudo wget -q -O /bin/terragrunt "https://github.com/gruntwork-io/terragrunt/releases/download/v${{ vars.TG_VERSION }}/terragrunt_linux_amd64"
           sudo chmod +x /bin/terragrunt
           terragrunt -v
-
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.INSTALLER_DEV_AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.INSTALLER_DEV_AWS_SECRET_KEY }}
-          aws-region: us-east-1
 
       - name: vpc
         working-directory: ./tofu/environments/stage/network/vpc
@@ -199,12 +203,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
+      - name: AWS login with DEV credentials
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.INSTALLER_DEV_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.INSTALLER_DEV_AWS_SECRET_KEY }}
           aws-region: us-east-1
+      - run: |-
+          aws codeartifact login --tool pip --domain energysage --domain-owner 659694780082 --repository cloud-engineering
+          aws codeartifact login --tool npm --domain energysage --domain-owner 659694780082 --repository cloud-engineering
+          poetry config http-basic.codeartifact aws $(aws codeartifact get-authorization-token --domain energysage --domain-owner 659694780082 --query authorizationToken --output text)
+      
 
       - name: Login to Amazon ECR
         id: login-ecr
@@ -289,12 +298,17 @@ jobs:
           output=$(cat ecr_tag.txt)
           echo ecr_tag=$output >> $GITHUB_OUTPUT
 
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
+      - name: AWS login with DEV credentials
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.INSTALLER_DEV_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.INSTALLER_DEV_AWS_SECRET_KEY }}
           aws-region: us-east-1
+      - run: |-
+          aws codeartifact login --tool pip --domain energysage --domain-owner 659694780082 --repository cloud-engineering
+          aws codeartifact login --tool npm --domain energysage --domain-owner 659694780082 --repository cloud-engineering
+          poetry config http-basic.codeartifact aws $(aws codeartifact get-authorization-token --domain energysage --domain-owner 659694780082 --query authorizationToken --output text)
+      
 
       - name: deploy backend-service
         working-directory: ./tofu/environments/stage/services/backend-service
