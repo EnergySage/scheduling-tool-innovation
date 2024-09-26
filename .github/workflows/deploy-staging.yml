@@ -51,7 +51,7 @@ jobs:
     environment: staging
     runs-on: ubuntu-latest
     env:
-      TF_VAR_region: us-east-1
+      TF_VAR_region: us-east-2
       TF_VAR_environment: ${{ vars.ENV_SHORT_NAME }}
       TF_VAR_name_prefix: "tb-${{ vars.PROJECT_SHORT_NAME }}-${{ vars.ENV_SHORT_NAME }}"
       TF_VAR_frontend_url: ${{ vars.FRONTEND_URL }}
@@ -65,7 +65,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.INSTALLER_DEV_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.INSTALLER_DEV_AWS_SECRET_KEY }}
-          aws-region: us-east-1
+          aws-region: us-east-2
       - name: Log into CodeArtifact
         id: codeartifact-login
         run: |
@@ -152,7 +152,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.INSTALLER_DEV_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.INSTALLER_DEV_AWS_SECRET_KEY }}
-          aws-region: us-east-1
+          aws-region: us-east-2
       - name: Log into CodeArtifact
         id: codeartifact-login
         run: |
@@ -189,7 +189,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.INSTALLER_DEV_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.INSTALLER_DEV_AWS_SECRET_KEY }}
-          aws-region: us-east-1
+          aws-region: us-east-2
 
       - name: Get frontend bucket & distribution
         id: get-frontend-resources
@@ -218,7 +218,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.INSTALLER_DEV_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.INSTALLER_DEV_AWS_SECRET_KEY }}
-          aws-region: us-east-1
+          aws-region: us-east-2
       - name: Log into CodeArtifact
         id: codeartifact-login
         run: |
@@ -287,7 +287,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.INSTALLER_DEV_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.INSTALLER_DEV_AWS_SECRET_KEY }}
-          aws-region: us-east-1
+          aws-region: us-east-2
       - name: Log into CodeArtifact
         id: codeartifact-login
         run: |
@@ -323,7 +323,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.INSTALLER_DEV_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.INSTALLER_DEV_AWS_SECRET_KEY }}
-          aws-region: us-east-1
+          aws-region: us-east-2
       - run: |-
           aws codeartifact login --tool pip --domain energysage --domain-owner 659694780082 --repository cloud-engineering
           aws codeartifact login --tool npm --domain energysage --domain-owner 659694780082 --repository cloud-engineering
