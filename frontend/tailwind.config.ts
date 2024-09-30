@@ -55,6 +55,9 @@ export default {
           900: '#1B1763',
         }
       },
+      boxShadow: {
+        light: '0 0 0 1px transparent,0 5px 10px 0 #c8dfff;',
+      },
     },
   },
   darkMode: 'class',

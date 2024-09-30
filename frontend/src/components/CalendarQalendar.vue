@@ -558,7 +558,7 @@ This was a fancy layer class, but @apply in sfc with custom layer classes is a n
 .calendar-root-wrapper .calendar-header__mode-picker {
   @apply relative h-10 text-base font-semibold whitespace-nowrap rounded-lg
   md:px-2 transition-all ease-in-out flex items-center justify-center gap-2
-  text-white bg-blue-600 md:min-w-32;
+  shadow-light text-white bg-blue-600 md:min-w-32;
 }
 
 /* @apply doesn't seem to mesh well with states */

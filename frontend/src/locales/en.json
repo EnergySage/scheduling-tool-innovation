@@ -377,7 +377,7 @@
     "bookingsWillAutomaticallyBeConfirmed": "Bookings will automatically be confirmed and added to your calendar.",
     "bookingsWillRequireToBeConfirmed": "You will need to confirm or decline bookings on your calendar.",
     "calendarDeletionWarning": "Removing this calendar will remove all appointments and schedules from Site Visit Scheduling. Any confirmed events currently stored in your calendar will not be removed.",
-    "chooseDateAndTime": "Choose when to meet.",
+    "chooseDateAndTime": "Select a free slot and schedule a site visit",
     "connectZoom": "Connect your Zoom account to generate instant meeting invites for each booking.",
     "contactRequestForm": "Please use the contact form below to send any feedback, questions, or concerns to our support team. If needed we will try and contact you for further information as soon as possible.",
     "defineDaysAndTimeSlots": "Choose the days and times this event can be booked.",

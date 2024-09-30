@@ -125,7 +125,9 @@ export const getLocale = (): string|null => {
  * @returns {ColorSchemes} - Colour theme value
  */
 export const getPreferredTheme = (): string => {
-  const theme = localStorage?.getItem('theme');
+  // TODO: Color Schemes - Revert this part which forces the light scheme when the dark one is ready.
+  return ColorSchemes.Light;
+  /*const theme = localStorage?.getItem('theme');
   if (!theme) {
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? ColorSchemes.Dark : ColorSchemes.Light;
   }
@@ -138,7 +140,7 @@ export const getPreferredTheme = (): string => {
     default:
       // This would be ColorSchemes.System, but I feel like we need a definitive answer here.
       return window.matchMedia('(prefers-color-scheme: dark)').matches ? ColorSchemes.Dark : ColorSchemes.Light;
-  }
+  }*/
 };
 
 /**
