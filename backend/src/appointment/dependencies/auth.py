@@ -178,7 +178,7 @@ def get_flash_user_data_from_token(request):
     print(payload_json)
     print("________________________________")
     flash_user_data = {
-        "username": payload_json["preferred_username"],
+        "username": payload_json["preferred_username"] if "preffered_username" in payload_json else payload_json["given_name"] + "." + payload_json["family_name"],
         "email": payload_json["email"],
         "name": payload_json["given_name"] + " " + payload_json["family_name"]
     }
