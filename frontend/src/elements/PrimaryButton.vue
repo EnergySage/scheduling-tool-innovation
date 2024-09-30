@@ -33,7 +33,7 @@ const copyToClipboard = async () => {
     class="
       relative flex h-10 items-center justify-center gap-2 whitespace-nowrap rounded-lg
       bg-blue-600 px-6 text-base font-semibold text-white transition-all ease-in-out
-      hover:shadow-md enabled:hover:bg-blue-700
+      shadow-light enabled:hover:bg-blue-700
       disabled:bg-gray-200 disabled:text-gray-500 disabled:shadow-none
     "
     :class="{ '!text-transparent': waiting }"
